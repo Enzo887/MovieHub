@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "5.2.1"
+  },
+  "name": "moviehub",
+  "version": "1.0.0",
+  "description": "Aplicación web de películas desarrollada con Node.js y Express, consumiendo APIs (TMDB y una propia)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enzo887/MovieHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Enzo887/MovieHub/issues"
+  },
+  "homepage": "https://github.com/Enzo887/MovieHub#readme"
+}
