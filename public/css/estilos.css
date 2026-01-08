@@ -9,7 +9,7 @@ html {
 body {
     padding-top: 70px;
     background-color: #232946;
-    font-family: Poppins;
+    font-family: "Inter", sans-serif;
 }
 
 p{
@@ -59,3 +59,16 @@ p{
 /* #tecnologias img:hover{
     transform: scale(1.1);
 } */
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+     font-family: "Oswald", sans-serif;
+    
+}
+
