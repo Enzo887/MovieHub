@@ -4,19 +4,28 @@ fetch('https://rest-api-deploy-w3sz.onrender.com/movies')
         const html = movies.map(movie => {
           return `
             
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                  <img src="${movie.poster}" class="img-fluid rounded netflix-card">
-                </div>
+                <img src="${movie.poster}" class="netflix-card rounded">
 
           `
         }).join('')
         document.querySelector('#pelisApi').innerHTML = html
     })
+const row = document.getElementById('pelisApi');
+const next = document.getElementById('nextBtn');
+const prev = document.getElementById('prevBtn');
 
-    // <article data-id="${movie.id}">
-    //           <h2>${movie.title}</h2>
-    //           <img src="${movie.poster}" alt="${movie.title}">
-    //           <p>${movie.year}</p>
+const scrollAmount = 400;
 
-    //           <button>Eliminar</button>
-    //         </article>
+next.addEventListener('click', () => {
+  row.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+prev.addEventListener('click', () => {
+  row.scrollBy({
+    left: -scrollAmount,
+    behavior: 'smooth'
+  });
+});

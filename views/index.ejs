@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/movies.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/movies.js" defer></script>
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
 <body>
@@ -45,23 +45,13 @@
             </select>
             <input type="text" class="form-control mt-2" placeholder="Buscar una pelicula...">
         </div>
-
-        <!-- hacer un grid
-        <div class="row d-flex justify-content-between">
-            <button class="btn btn-primary">Todo</button>
-            <button class="btn btn-primary">Año</button>
-            <button class="btn btn-primary">Género</button>
-            <button class="btn btn-primary">Director</button>
-        </div> -->
-        
-
     </section>
 
-    <section id="peliculas" class="container-fluid my-4">
-        <h3 class="text-light mb-3">COINCIDENCIAS</h3>
-        <div id="pelisApi" class="row flex-nowrap overflow-auto netflix-row">
-
-        </div>
+    <section id="peliculas" class="carousel-wrapper my-4 p-2">
+        <h3 class="text-light">COINCIDENCIAS</h3>
+        <button class="arrow left" id="prevBtn">‹</button>
+            <div id="pelisApi" class="netflix-row"></div>
+        <button class="arrow right" id="nextBtn">›</button>
     </section>
     <!-- <h1>Hola <%= nombre%> 👋 </h1> -->
 </body>
