@@ -43,22 +43,6 @@ p{
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.resaltado{
-    color: #f2d760;
-}
-
-#tecnologias img{
-    width: 80px;
-    height: 80px;
-    /* transition: transform .2s ease-in-out; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* #tecnologias img:hover{
-    transform: scale(1.1);
-} */
 
 
 .bebas-neue-regular {
@@ -67,8 +51,31 @@ p{
   font-style: normal;
 }
 
-h1{
-     font-family: "Oswald", sans-serif;
-    
+h1,h3{
+    font-family: "Oswald", sans-serif;
+    color: white;
 }
 
+img {
+      height: auto;
+      width: 320px;
+      max-width: 100%;
+    }
+
+.netflix-row {
+  scrollbar-width: none; /* Firefox */
+}
+
+.netflix-row::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.netflix-card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.netflix-card:hover {
+  transform: scale(1.15);
+  z-index: 2;
+}

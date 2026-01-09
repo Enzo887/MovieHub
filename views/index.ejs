@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieHub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/movies.js"></script>
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
 <body>
@@ -34,45 +35,32 @@
     </nav>
 
     <section id="buscador" class="container">
-        <div class="input-group-lg p-2">
-            <h1 class="text-center text-light">BIENVENIDO</h1>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <div class="input p-2 row">
+            <h1 class="text-center">BIENVENIDO</h1>
+            <select class="form-select">
+                <option selected>Seleccione un filtro</option>
+                <option value="1">Genero</option>
+                <option value="2">Director</option>
+                <option value="3">Año</option>
+            </select>
+            <input type="text" class="form-control mt-2" placeholder="Buscar una pelicula...">
         </div>
 
-        <!-- hacer un grid -->
-        <div class="d-flex flex-row gap-4 justify-content-center">
-            <button class="btn btn-primary">hola</button>
-            <button class="btn btn-primary">hola</button>
-            <button class="btn btn-primary">hola</button>
-            <button class="btn btn-primary">hola</button>
-        </div>
+        <!-- hacer un grid
+        <div class="row d-flex justify-content-between">
+            <button class="btn btn-primary">Todo</button>
+            <button class="btn btn-primary">Año</button>
+            <button class="btn btn-primary">Género</button>
+            <button class="btn btn-primary">Director</button>
+        </div> -->
+        
 
     </section>
 
-    <section id="peliculas" class="container">
-        <div class="row mt-4">
-            <div class="col-md-8">
-                <div class="col-md-3 text-center">
-                    <img src="" class="img-fluid p-3 img-proyecto" alt="">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title text-light">API REST de películas</h5>
-                        <p class="card-text">
-                            API REST de películas desarrollada con Node.js y Express, con arquitectura MVC y CRUD completo. Deployada en Render con fines educativos.   
-                        </p>
-                        <div class="d-flex gap-3">
-                        <a target="_blank" href="https://github.com/Enzo887/rest-api-deploy" class="btn">
-                            Código
-                        </a>
-                        <a target="_blank" href="https://rest-api-deploy-w3sz.onrender.com" class="btn">
-                            Ver
-                        </a>
-                        </div>
+    <section id="peliculas" class="container-fluid my-4">
+        <h3 class="text-light mb-3">COINCIDENCIAS</h3>
+        <div id="pelisApi" class="row flex-nowrap overflow-auto netflix-row">
 
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- <h1>Hola <%= nombre%> 👋 </h1> -->
