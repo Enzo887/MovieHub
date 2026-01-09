@@ -3,9 +3,13 @@ import { renderPelis } from "./ui/render.js"
 import { iniciarCarousel } from "./interaction/carrusel.js"
 
 async function iniciar(){
-  const movies = await obtenerPeliculas()
-  renderPelis(movies)
-  iniciarCarousel()
+  try {
+    const movies = await obtenerPeliculas()
+    renderPelis(movies)
+    iniciarCarousel()
+  } catch (error) {
+    console.error('Error inicializando la app')
+  }
 }
 
 iniciar()
