@@ -1,4 +1,4 @@
-fetch('https://rest-api-deploy-w3sz.onrender.com/movies')
+fetch('/movies')
       .then(res => res.json())
       .then(movies => {
         const html = movies.map(movie => {
