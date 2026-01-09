@@ -3,7 +3,6 @@ html {
 }
 .colorNav{
     background: #232946;
-    
 }
 
 body {
@@ -16,66 +15,83 @@ p{
     color: #b8c1ec;
 }   
 
-.card {
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: .2s ease-in-out;
-}
-.card:hover {
-    transform: translateY(-5px);
-} 
-
-.btn {
-    /* border-radius: 30px; */
-    padding: 8px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    backdrop-filter: blur(8px); 
-    transition: .3s;
-}
-
-.btn:hover {
-    /* transform: translateY(-3px); */
-    transform: scale(1.1);
-    color: #D3D3D3;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-
-
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 h1,h3{
     font-family: "Oswald", sans-serif;
     color: white;
 }
+.resaltado{
+  color: #2CEEF0;
+}
 
 img {
       height: auto;
-      width: 320px;
       max-width: 100%;
     }
 
 .netflix-row {
-  scrollbar-width: none; /* Firefox */
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem;
+  scrollbar-width: none;
 }
 
 .netflix-row::-webkit-scrollbar {
-  display: none; /* Chrome */
+  display: none;
 }
 
 .netflix-card {
+  width: 180px;
+  flex-shrink: 0;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.netflix-card:hover {
-  transform: scale(1.15);
-  z-index: 2;
+.carousel-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+/* Hover solo desktop */
+@media (hover: hover) {
+  .netflix-card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+}
+
+/* Flechas solo desktop */
+@media (hover: none) {
+  .arrow {
+    display: none;
+  }
+  .netflix-card {
+  width: 100px;
+  }
 }
