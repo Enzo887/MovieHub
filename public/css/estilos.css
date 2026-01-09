@@ -20,6 +20,9 @@ h1,h3{
     font-family: "Oswald", sans-serif;
     color: white;
 }
+.resaltado{
+  color: #2CEEF0;
+}
 
 img {
       height: auto;
