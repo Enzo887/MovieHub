@@ -1,9 +1,29 @@
-<h1>Películas</h1>
+      <section id="buscador" class="container">
+        <div class="input p-2 row">
+            <input type="text" class="form-control mt-2" placeholder="Buscar una pelicula...">
+        </div>
+        <div id="filtros" class="d-flex flex-row gap-4">
+            <button class="btn btn-primary">Todo</button>
+            <select class="form-select">
+                <option selected>Categorias</option>
+                <option value="1">Genero</option>
+                <option value="2">Director</option>
+                <option value="3">Año</option>
+            </select>
+            <select class="form-select">
+                <option selected>APIs</option>
+                <option value="1">Mi API Movie</option>
+                <option value="2">TMDB</option>
+            </select>
+        </div>
+    </section>
 
-<ul>
-  <% movies.forEach(movie => { %>
-    <li>
-      <%= movie.title %> - <%= movie.year %>
-    </li>
-  <% }) %>
-</ul>
+    <section id="peliculas" class="container my-4 p-2">
+        <h3 class="text-light">Genero: Drama</h3>
+        <div class="carousel-wrapper">
+            <button class="arrow left" id="prevBtn">‹</button>
+            <div id="pelisApi" class="netflix-row"></div>
+            <button class="arrow right" id="nextBtn">›</button>
+        </div>
+        <h3 class="text-light">Año: 1900s</h3>
+    </section>

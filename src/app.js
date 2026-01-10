@@ -1,15 +1,20 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import {routerMovie} from './routes/movies.js'
+import expressLayouts from 'express-ejs-layouts'
+import path from 'node:path'
 
 const app = express()
 dotenv.config()
 const PORT = process.env.PORT ?? 5500
 
 app.set('view engine', 'ejs')
+app.set('layout', 'layouts/main')
+
+app.use(express.static('public'))
+app.use(expressLayouts)
 
 app.use('/', routerMovie)
-app.use(express.static('public'))
 
 app.listen(PORT, ()=>{ 
     console.log(`Escuchando en http://localhost:${PORT}`)

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg colorNav shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light " href="/"><span class="resaltado">Movie</span>Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/about">Sobre esta web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/TMDB"> Créditos TMDM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <%-body%>    
+
+    <!-- <section id="buscador" class="container">
+        <div class="input p-2 row">
+            <input type="text" class="form-control mt-2" placeholder="Buscar una pelicula...">
+        </div>
+        <div id="filtros" class="d-flex flex-row gap-4">
+            <button class="btn btn-primary">Todo</button>
+            <select class="form-select">
+                <option selected>Categorias</option>
+                <option value="1">Genero</option>
+                <option value="2">Director</option>
+                <option value="3">Año</option>
+            </select>
+            <select class="form-select">
+                <option selected>APIs</option>
+                <option value="1">Mi API Movie</option>
+                <option value="2">TMDB</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="peliculas" class="container my-4 p-2">
+        <h3 class="text-light">Genero: Drama</h3>
+        <div class="carousel-wrapper">
+            <button class="arrow left" id="prevBtn">‹</button>
+            <div id="pelisApi" class="netflix-row"></div>
+            <button class="arrow right" id="nextBtn">›</button>
+        </div>
+        <h3 class="text-light">Año: 1900s</h3>
+    </section> -->
+</body>
+</html>
