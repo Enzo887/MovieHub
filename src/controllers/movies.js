@@ -3,7 +3,7 @@ import {MovieModel} from '../models/movie.js'
 export class MovieController{
 
     static async renderHome(req, res){
-        res.render('index')
+        res.render('movies')
     }
 
     static async renderAbout(req, res){
