@@ -2,7 +2,6 @@ import express from 'express'
 import dotenv from 'dotenv'
 import {routerMovie} from './routes/movies.js'
 import expressLayouts from 'express-ejs-layouts'
-import path from 'node:path'
 
 const app = express()
 dotenv.config()
