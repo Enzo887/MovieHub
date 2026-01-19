@@ -1,4 +1,4 @@
-import {MovieModel} from '../models/TMDBMovie.js'
+import {getMovies} from '../services/moviesServices.js'
 
 export class MovieController{
 
@@ -15,7 +15,13 @@ export class MovieController{
     }
 
     static async getMovies(req, res){
-        const movies = await MovieModel.getMovies()
-        return res.json(movies)
+        try {
+            const {source} = req.query
+            const movies = await getMovies(source)
+            res.json(movies)
+        } catch (error) {
+            res.status(500).json({ error: 'Error al obtener películas' })
+        }
+
     }
 }

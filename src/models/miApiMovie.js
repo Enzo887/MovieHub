@@ -1,6 +1,6 @@
-export class MovieModel{
+export class localModel{
     static async getMovies(){
-        const response = await fetch('https://api.themoviedb.org/3/movie/11')
+        const response = await fetch('https://rest-api-deploy-w3sz.onrender.com/movies')
         const movies = await response.json()
         
         return movies
