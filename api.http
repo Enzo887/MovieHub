@@ -1,0 +1,5 @@
+@token = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzUyZmU3NDNlODhmZTRjYmM3MzI0Y2UzODZjZWJkZCIsIm5iZiI6MTc2ODEzODc3Ni4yMTIsInN1YiI6IjY5NjNhODE4MDcxYmU2MTQyMzNkN2E4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wY9py6UqZUPrXmAiBQr_n0yc_lmMRqEiuJZ31P9nnc4
+
+GET https://api.themoviedb.org/3/movie/popular?language=es-ES&page=1
+Authorization: Bearer {{token}}
+Accept: application/json

@@ -1,4 +1,4 @@
-import {MovieModel} from '../models/movie.js'
+import {MovieModel} from '../models/TMDBMovie.js'
 
 export class MovieController{
 
