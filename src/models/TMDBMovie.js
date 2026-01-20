@@ -9,4 +9,7 @@ export class tmdbModel{
 
         return movies.results
     }
+    // export async function obtenerConfig(){
+//     const response = await fetch('https://api.themoviedb.org/3/configuration')
+// }
 }
