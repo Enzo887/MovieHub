@@ -16,8 +16,6 @@ export class MovieController{
 
     static async getMovies(req, res){
         try {
-            const config = await obtenerConfig()
-            res.json(config)
             const {source} = req.query
             const movies = await getMovies(source)
             res.json(movies)
